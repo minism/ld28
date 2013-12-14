@@ -1,7 +1,9 @@
 require 'leaf/init'
 require 'common/lib/strict'
 local Channel = require 'common/channel'
+local constants = require 'common/constants'
 local MessageType = require 'common/message_type'
+local utils = require 'common/utils'
 
 local function log(...)
   print(table.concat(arg, ' '))
@@ -9,7 +11,7 @@ end
 
 
 local channel = Channel()
-address = '0.0.0.0:10004'
+local address = utils.getLANAddress()
 channel:listen(address)
 log("Listening on", address)
 while true do

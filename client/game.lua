@@ -1,11 +1,12 @@
 local Channel = require 'common/channel'
 local MessageType = require 'common/message_type'
+local utils = require 'common/utils'
 
 local Game = leaf.Context:extend()
 
 function Game:init()
   self.channel = Channel()
-  self.channel:connect('127.0.0.1:10004')
+  self.channel:connect(utils.getWANAddress())
   console:write "Game initializied"
 end
 

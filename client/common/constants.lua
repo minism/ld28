@@ -1,0 +1,6 @@
+return {
+  WAN_ADDRESS = "50.131.59.214",
+  -- WAN_ADDRESS = "192.168.1.123",
+  LAN_ADDRESS = "0.0.0.0",
+  PORT = 10077,
+}
