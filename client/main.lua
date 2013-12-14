@@ -1,13 +1,13 @@
 require 'math'
 require 'os'
 
--- Setup globals
+require 'common/lib/strict'
 require 'leaf'
 
--- Use strict, no more globals after this point
-require 'lib/strict'
-
 local Game = require 'game'
+
+-- Globals
+console = leaf.Console()
 
 
 function love.load()
