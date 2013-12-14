@@ -1,0 +1,3 @@
+[submodule "client/leaf"]
+	path = client/leaf
+	url = git@github.com:minism/leaf
