@@ -91,7 +91,7 @@ function Channel:_transmit(queue, channel, flag)
 
   -- Simple determination of client/server by self.peer
   if self.peer then
-    self.peer:send(data, 1, 'reliable')
+    self.peer:send(data, channel, flag)
   else
     self.host:broadcast(data, channel, flag)
   end
